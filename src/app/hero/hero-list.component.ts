@@ -16,7 +16,9 @@ export class HeroListComponent implements OnInit {
 
   constructor(private heroService: HeroService) { }
 
-  ngOnInit() { this.getHeroes(); }
+  ngOnInit() {
+    this.getHeroes();
+  }
 
   getHeroes() {
     this.isLoading = true;
@@ -26,5 +28,7 @@ export class HeroListComponent implements OnInit {
     this.selectedHero = undefined;
   }
 
-  select(hero: Hero) { this.selectedHero = hero; }
+  select(hero: Hero) {
+    this.selectedHero = hero;
+  }
 }

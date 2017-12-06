@@ -1,9 +1,7 @@
 <form [formGroup]="heroForm" (ngSubmit)="onSubmit()" novalidate>
   <div style="margin-bottom: 1em">
-    <button type="submit"
-            [disabled]="heroForm.pristine" class="btn btn-success">Save</button> &nbsp;
-    <button type="reset" (click)="revert()"
-            [disabled]="heroForm.pristine" class="btn btn-danger">Revert</button>
+    <button type="submit" [disabled]="heroForm.pristine" class="btn btn-success">Save</button> &nbsp;
+    <button type="reset" (click)="revert()" [disabled]="heroForm.pristine" class="btn btn-danger">Revert</button>
   </div>
 
   <!-- Hero Detail Controls -->
@@ -14,7 +12,7 @@
   </div>
 
   <div formArrayName="secretLairs" class="well well-lg">
-    <div *ngFor="let address of secretLairs.controls; let i=index" [formGroupName]="i" >
+    <div *ngFor="let address of secretLairs.controls; let i=index" [formGroupName]="i">
       <!-- The repeated address template -->
       <h4>Address #{{i + 1}}</h4>
       <div style="margin-left: 1em;">

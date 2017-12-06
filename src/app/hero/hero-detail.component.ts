@@ -78,7 +78,9 @@ export class HeroDetailComponent implements OnChanges {
     return saveHero;
   }
 
-  revert() { this.ngOnChanges(); }
+  revert() {
+    this.ngOnChanges();
+  }
 
   logNameChange() {
     const nameControl = this.heroForm.get('name');
